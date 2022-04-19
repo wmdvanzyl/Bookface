@@ -17,6 +17,24 @@
         <section id="header-section">
             <h1>Welcome to Bookface!</h1>
         </section>
+        <section id="login-section">
+            <table>
+                <form method="post" action=" {{ route('loginUser') }}" id="login-form">
+                    {{ csrf_field() }}
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="text" name="email" id="form-input-email-field"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td><input type="text" name="password" id="form-input-password-field"></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" id="form-button-submit">Login</button></td>
+                    </tr>
+                </form>
+            </table>
+        </section>
         <section id="actions-section">
             <a class="button" href="/register">Register</a>
         </section>
